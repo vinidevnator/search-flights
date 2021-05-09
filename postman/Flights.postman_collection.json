@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "e6ac1412-825f-4bff-a37a-39822c5f8347",
+		"name": "Flights",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Send flights",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\": \"RIO\",\r\n    \"to\": \"MIAMI\",\r\n    \"date\": \"1995-05-01\",\r\n    \"company\": \"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/flights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"flights"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get flights",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/flights?departure=1995-05-01&from=RIO&to=MIAMI",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"flights"
+					],
+					"query": [
+						{
+							"key": "departure",
+							"value": "1995-05-01"
+						},
+						{
+							"key": "from",
+							"value": "RIO"
+						},
+						{
+							"key": "to",
+							"value": "MIAMI"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
